@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+
+.grid {
+  display: grid;
+  width: auto;
+
+  @media only screen and (max-width: $screen-sm-max) {
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    grid-template-columns: repeat(12, 38px);
+    column-gap: 2.4rem;
+    -moz-column-gap: 2.4rem;
+  }
+
+  @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    grid-template-columns: repeat(12, 5.6rem);
+    column-gap: 2.4rem;
+    -moz-column-gap: 2.4rem;
+  }
+
+  @media only screen and (min-width: $screen-xl-min) {
+    grid-template-columns: repeat(12, 7.6rem);
+    column-gap: 2.4rem;
+    -moz-column-gap: 2.4rem;
+  }
+
+  &__content {
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      grid-column: 1 / span 12;
+    }
+
+    @media only screen and (min-width: $screen-lg-min) {
+      grid-column: 2 / span 10;
+    }
+  }
+
+  &__image {
+    grid-column: 1 / span 12;
+
+    @media only screen and (max-width: $screen-sm-max) {
+      grid-column: 1 / span 1;
+    }
+
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      grid-column: 2 / span 10;
+    }
+  }
+}

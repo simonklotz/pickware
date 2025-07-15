@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+
+.layout-space {
+  width: 100%;
+
+  &--article-page-level-1 {
+    @media only screen and (max-width: $screen-sm-max) {
+      height: 64px;
+    }
+
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      height: 80px;
+    }
+
+    @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+      height: 80px;
+    }
+
+    @media only screen and (min-width: $screen-xl-min) {
+      height: 96px;
+    }
+  }
+
+  &--content-page-level-2 {
+    height: 48px;
+
+    @media only screen and (min-width: $screen-xl-min) {
+      height: 64px;
+    }
+  }
+
+  &--article-page-level-3 {
+    height: 3.2rem;
+  }
+}

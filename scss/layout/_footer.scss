@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+
+  .github {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+
+    @media only screen and (max-width: $screen-sm-max) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .github-text {
+      display: flex;
+      align-items: center;
+      height: 64px;
+      padding-right: 10px;
+    }
+
+    .github-logo {
+      display: block;
+      width: 64px;
+      height: 64px;
+      background-image: url("../assets/icons/github-grey.svg");
+      background-size: contain;
+
+      &:hover {
+        background-image: url("../assets/icons/github-white.svg");
+      }
+    }
+  }
+}

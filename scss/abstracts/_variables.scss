@@ -1,0 +1,20 @@
+/* COLORS */
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #19a6eb;
+$color-dark-blue: #283593;
+$color-grey-blue-dark: #262f38;
+$color-grey-blue-light: #2e3943;
+$color-green: #00c853;
+
+$color-text-gray-dark: #37434f;
+$color-text-gray-light: #788a9c;
+
+/* BREAKPOINTS */
+$screen-sm-max: 767px;
+$screen-md-max: 983px;
+$screen-lg-max: 1223px;
+
+$screen-md-min: $screen-sm-max + 1;
+$screen-lg-min: $screen-md-max + 1;
+$screen-xl-min: $screen-lg-max + 1;

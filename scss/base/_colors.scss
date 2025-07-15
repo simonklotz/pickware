@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as *;
+
+.body {
+  background: $color-white;
+  color: $color-text-gray-dark;
+
+  .header {
+    background: $color-black;
+    color: $color-white;
+  }
+
+  .main {
+    .hero-text {
+      &__eyebrow {
+        color: $color-text-gray-light;
+      }
+
+      &__heading {
+        color: $color-dark-blue;
+      }
+    }
+
+    .simon-facts {
+      &__fact {
+        color: $color_dark-blue;
+      }
+
+      &__fact-addition {
+        color: $color-text-gray-light;
+      }
+    }
+
+    .simon-cv-intro {
+      &__eyebrow {
+        color: $color-text-gray-light;
+      }
+
+      &__heading {
+        color: $color-dark-blue;
+      }
+    }
+
+    .simon-cv {
+      .cv-content__date {
+        color: $color-dark-blue;
+      }
+
+      .cv-content__heading {
+        color: $color-dark-blue;
+      }
+
+      .cv-content__text {
+
+      }
+    }
+
+    .teaser {
+      .teaser__eyebrow {
+        color: $color-text-gray-light;
+      }
+
+      .teaser__heading {
+        color: $color-dark-blue;
+      }
+    }
+  }
+
+  .footer {
+    background: $color-grey-blue-dark;
+    color: $color-white;
+  }
+
+  .modal {
+    &__content {
+      background-color: $color-white;
+    }
+
+    .contact-info__eyebrow {
+      color: $color-text-gray-light;
+    }
+
+    .contact-info__heading {
+      color: $color-dark-blue;
+    }
+  }
+}

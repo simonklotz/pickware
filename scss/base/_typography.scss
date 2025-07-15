@@ -1,0 +1,309 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/variables" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+
+  .p {
+    line-height: 1.6rem; // 28px
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  .h1 {
+    display: block;
+    margin-top: 0;
+    overflow-wrap: unset;
+  }
+
+  .hero-text {
+    &__eyebrow {
+      font-family: "Roboto Medium", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      line-height: 2.4rem;
+    }
+
+    &__heading {
+      font-family: "Roboto Light", sans-serif;
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: -0.38px;
+      line-height: 4.2rem;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 3.2rem;
+        letter-spacing: -0.38px;
+        line-height: 4.2rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 4.6rem;
+        letter-spacing: -0.55px;
+        line-height: 5.6rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 6.0rem;
+        letter-spacing: -0.7px;
+        line-height: 7.2rem;
+      }
+    }
+  }
+
+  .intro-text {
+    &-wrapper {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 2.8rem;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 1.7rem;
+        letter-spacing: 0.19px;
+        line-height: 2.6rem;
+      }
+    }
+  }
+
+  .simon-facts {
+    &__fact {
+      font-weight: 400;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 2.5rem;
+        letter-spacing: -.11px;
+        line-height: 3.2rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 3rem;
+        letter-spacing: -.13px;
+        line-height: 4rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-family: "Roboto Light", sans-serif;
+        font-size: 4.8rem;
+        font-weight: 300;
+        letter-spacing: -.5px;
+        line-height: 6rem;
+      }
+    }
+
+    &__fact-addition {
+      font-family: "Roboto Medium", sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 1.25px;
+      line-height: 2.4rem;
+    }
+  }
+
+  .simon-cv-intro {
+    &__eyebrow {
+      font-family: "Roboto Medium", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      line-height: 2.4rem;
+    }
+
+    &__heading {
+      font-family: "Roboto Light", sans-serif;
+      font-weight: 300;
+
+      @media only screen and (max-width: 375px) {
+        word-break: break-word;
+      }
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 2.9rem;
+        letter-spacing: -.31px;
+        line-height: 3.6rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 3.8rem;
+        letter-spacing: -.41px;
+        line-height: 4.8rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 4.8rem;
+        letter-spacing: -.5px;
+        line-height: 6rem;
+      }
+    }
+
+    &__text {
+      font-family: "Roboto Light", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: -.1px;
+      line-height: 2.8rem;
+
+      @media only screen and (max-width: 375px) {
+        word-break: break-word;
+      }
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 1.9rem;
+        letter-spacing: -.11px;
+        line-height: 2.8rem;
+      }
+    }
+  }
+
+  .simon-cv {
+    .cv-content__date {
+      font-family: "Roboto Medium", sans-serif;
+      font-weight: 500;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 1.7rem;
+        letter-spacing: -.34px;
+        line-height: 2.6rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 1.8rem;
+        letter-spacing: .36px;
+        line-height: 2.8rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 2rem;
+        letter-spacing: .15px;
+        line-height: 2.8rem;
+      }
+    }
+
+    .cv-content__heading {
+      font-weight: 400;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 2.5rem;
+        letter-spacing: -.11px;
+        line-height: 3.2rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 3rem;
+        letter-spacing: -.13px;
+        line-height: 4rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 3.4rem;
+        letter-spacing: -.15px;
+        line-height: 4.4rem;
+      }
+    }
+
+    .cv-content__text {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: .3px;
+      line-height: 2.8rem;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 1.7rem;
+        letter-spacing: .19px;
+        line-height: 2.6rem;
+      }
+    }
+  }
+
+  .teaser {
+    .teaser__eyebrow {
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      line-height: 2.4rem;
+    }
+
+    .teaser__heading {
+      font-family: "Roboto Light", sans-serif;
+      font-weight: 300;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 2.9rem;
+        letter-spacing: -.31px;
+        line-height: 3.6rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 3.8rem;
+        letter-spacing: -.41px;
+        line-height: 4.8rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 4.8rem;
+        letter-spacing: -.5px;
+        line-height: 6rem;
+      }
+    }
+
+    .teaser__text {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: .3px;
+      line-height: 2.8rem;
+    }
+
+    .teaser__button {
+      font-family: "Roboto Medium", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .5px;
+      line-height: 46px;
+    }
+  }
+
+  .modal {
+    .contact-info__eyebrow {
+      font-family: "Roboto Medium", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      line-height: 2.4rem;
+    }
+
+    .contact-info__heading {
+      font-weight: 400;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        font-size: 2.5rem;
+        letter-spacing: -.11px;
+        line-height: 3.2rem;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-max) {
+        font-size: 3.0rem;
+        letter-spacing: -.13px;
+        line-height: 4.0rem;
+      }
+
+      @media only screen and (min-width: $screen-xl-min) {
+        font-size: 3.4rem;
+        letter-spacing: -.15px;
+        line-height: 4.4rem;
+      }
+    }
+  }
+}

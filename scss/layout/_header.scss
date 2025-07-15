@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+
+.body {
+  padding-top: 88px;
+
+  @media only screen and (min-width: $screen-xl-min) {
+    padding-top: 124px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 20px 60px 0 rgba(69, 85, 100, .08), 0 0 12px 0 rgba(40, 53, 147, .08);
+  transition: transform 150ms cubic-bezier(.4,0,.2,1);
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.main-menu {
+  width: 100%;
+  background-color: $color-white;
+
+  .content-wrapper {
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media only screen and (max-width: $screen-sm-max) {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 425px;
+    }
+
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      width: 720px;
+    }
+
+    @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+      width: 936px;
+    }
+
+    @media only screen and (min-width: $screen-xl-min) {
+      width: 1176px;
+    }
+
+    .main-menu__flexbox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+
+      .main-menu__logo-wrapper {
+        width: auto;
+        height: 72px;
+
+        @media only screen and (min-width: $screen-xl-min) {
+          height: 108px;
+        }
+
+        .main-menu__logo {
+          width: inherit;
+          height: inherit;
+        }
+      }
+
+      .main-menu__button-wrapper {
+        position: relative;
+        width: auto;
+        height: 72px;
+
+        @media only screen and (min-width: $screen-xl-min) {
+          height: 108px;
+        }
+      }
+    }
+  }
+}

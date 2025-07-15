@@ -1,0 +1,174 @@
+@use "../abstracts/variables" as *;
+
+#toggle-contact-modal {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  overflow-y: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 200;
+  background: #000;
+  pointer-events: none;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+  pointer-events: auto;
+  opacity: 0.8;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 201;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+
+  .modal__close-button {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 201;
+
+    @media only screen and (max-width: $screen-md-max) {
+      right: 24px;
+      top: 24px;
+    }
+
+    @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+      right: 16px;
+      top: 16px;
+    }
+
+    @media only screen and (min-width: $screen-xl-min) {
+      right: 32px;
+      top: 32px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eceef1;
+    border-radius: 4px;
+    min-height: 600px;
+    cursor: default;
+    transform: scale(0.5);
+
+    @media only screen and (max-width: $screen-sm-max) {
+      min-height: 350px;
+    }
+
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      min-height: 400px;
+    }
+
+    .contact-info {
+      padding: 64px 128px;
+
+      @media only screen and (max-width: $screen-sm-max) {
+        padding: 32px;
+      }
+
+      @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        padding: 64px 92px;
+      }
+
+      @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        padding: 64px 92px;
+      }
+
+      &__eyebrow {
+        vertical-align: middle;
+      }
+
+      &__heading {
+        margin-bottom: 24px;
+      }
+
+      &__options {
+        .contact-option {
+          box-sizing: content-box;
+          width: 100%;
+          height: 46px;
+          border-radius: 4px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: .5px;
+          line-height: 46px;
+          text-decoration: none;
+          white-space: nowrap;
+          border: 1px solid transparent;
+          cursor: pointer;
+          transition-property: background-color, border-color;
+          transition-timing-function: ease-in;
+          transition-duration: .1s;
+          padding: 0 8px;
+          color: $color-blue;
+          display: flex;
+          align-items: center;
+          margin-left: -8px;
+          user-select: none;
+
+          &:hover {
+            background-color: #ebf8fd;
+            color: $color-blue;
+          }
+
+          &__icon {
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;
+
+            &--phone {
+              background-image: url("../assets/icons/phone.svg");
+            }
+
+            &--mail {
+              background-image: url("../assets/icons/mail.svg");
+            }
+          }
+        }
+      }
+    }
+
+    .contact-image__wrapper {
+      height: 717px;
+
+      .contact-image {
+        max-width: 478px;
+
+        @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+          max-width: 400px;
+        }
+      }
+
+      @media only screen and (max-width: $screen-md-max) {
+        display: none;
+      }
+
+      @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        height: 600px;
+      }
+    }
+  }
+}
+
+input[type="checkbox"]:checked ~ .modal {
+  pointer-events: auto;
+  opacity: 1;
+}
+input[type="checkbox"]:checked ~ .modal .modal__content {
+  transform: scale(1);
+}
+
+

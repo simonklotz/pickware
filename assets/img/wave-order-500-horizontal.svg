@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox='0 0 528 312' version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='none'>
+    <g id='teaser-/-illu-basic-🟢' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+        <g id='illu-highlight---wave---vertikal' transform='translate(264.000000, 156.000000) rotate(-90.000000) translate(-264.000000, -156.000000) translate(108.000000, -108.000000)' fill='#D8F2FC' fill-rule='nonzero'>
+            <path d='M74.9636043,0 L312,0 L312,528 L74.9636043,528 C-3.52178007,411.481481 -20.3777015,301.753086 24.3958399,198.814815 C69.1693813,95.8765432 86.0253028,29.6049383 74.9636043,0 Z' id='illu-highlight---wave'></path>
+        </g>
+    </g>
+</svg>
